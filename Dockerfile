@@ -5,4 +5,4 @@ COPY requirements.txt .
 COPY upload /bin/upload
 
 RUN chmod a+x /bin/upload
-RUN pip -r requirements.txt
+RUN pip install -r requirements.txt
