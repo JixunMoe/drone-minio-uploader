@@ -2,10 +2,6 @@ from os import getenv as env, path
 from uploader.args import args
 from uploader.const import S3_SERVER, UPLOAD_BUCKET, UPLOAD_DIR, FILE_PREFIX, ACCESS_KEY, SECRET_KEY
 from minio import Minio
-from minio.error import ResponseError
-
-print(f'ACCESS_KEY={ACCESS_KEY}')
-print(f'SECRET_KEY={SECRET_KEY}')
 
 
 class Uploader(Minio):
