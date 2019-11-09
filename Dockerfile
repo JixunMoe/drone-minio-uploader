@@ -6,4 +6,6 @@ RUN pip install -r requirements.txt
 COPY uploader /usr/local/lib/python3.8/site-packages/uploader
 COPY upload /bin/upload
 
-RUN chmod a+x /bin/upload
+# Cache pyc
+RUN upload -h
+
