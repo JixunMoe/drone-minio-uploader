@@ -6,6 +6,4 @@ RUN pip install -r requirements.txt
 COPY uploader /usr/local/lib/python3.8/site-packages/uploader
 COPY upload /bin/upload
 
-# Cache pyc
-RUN upload -h
-
+RUN sed -i.bak 's/if k is/if k ==/' /usr/local/lib/python3.8/site-packages/minio/helpers.py
